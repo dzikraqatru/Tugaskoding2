@@ -1,0 +1,81 @@
+<html>
+<head>
+   <title>Tugas coding</title>
+</head>
+<body>
+<b>FORM</b>
+<form action="" method="POST" name="form1">
+  <table>
+    <tr>
+      <td>Nama </td>
+      <td>:</td>
+      <td><input type="text" name="nama" size="25"></td
+    </tr>
+     <tr>
+         <td>NIM </td>
+         <td>:</td>
+         <td><input type="text" name="nim" size="25"></td>
+    </tr>
+    <tr>
+        <td>Alamat</td>
+        <td>:</td>
+        <td><input type="text" name="alamat" size="25"></td>
+    </tr>
+    <tr>
+      <td>Jenis Kelamin </td>
+      <td>:</td>
+      <td>
+      <input type="radio" name="jenis kelamin" value <input type="radio" name="jenis kelamin" value="Laki-Laki" checked="">Laki-Laki 
+      <input type="radio" name="jenis kelamin" value <input type="radio" name="jenis kelamin" value="Perempuan" checked="">Perempuan
+      </td>
+  </tr>
+  <tr>
+      <td>Mata kuliah yang disukai </td>
+      <td>:</td>
+      <td>
+         <select name="matkul">
+             <option value="MATEMATIKA">MATEMATIKA</option>
+             <option value="IPS">IPS</option>
+             <option value="KALKULUS">KALKULUS</option>
+         </select>
+     </td>
+  </tr>
+  <tr>
+     <td><input type="submit" name="spn" value="simpan"></td>
+  </tr>
+</table>
+</form>
+</body>
+  
+  
+<?php
+if(isset($_POST['spn'])){
+    $nama $_POST['nama'];
+    $nim $_POST['nim'];
+    $alamat $_POST['alamat'];
+    $jenis kelamin $_POST['jenis kelamin'];
+    $matkul $_POST['matkul'];
+?>
+<b>HASIL</b>
+<table border="1">
+    <tr>
+        <td>NO</td>
+        <td>Nama</td>
+        <td>NIM</td>
+        <td>Alamat</td>
+        <td>Jenis Kelamin</td>
+        <td>Mata Kuliah</td>
+   </tr>
+   <tr>
+       <td>1</td>
+       <td><?php echo $nama; ?></td>
+       <td><?php echo $nim; ?></td>
+       <td><?php echo $alamat; ?></td>
+       <td><?php echo $jenis kelamin; ?></td>
+       <td><?php echo $matkul; ?></td>
+   </tr>
+   <?php
+   }
+?>
+</table>
+</html>
